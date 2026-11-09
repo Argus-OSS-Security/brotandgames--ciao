@@ -1,10 +1,11 @@
 name: build and push docker image
 
-on:
-  push:
-    tags:
-      - '*'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     tags:
+#       - '*'
+# 
 env:
   DOCKERHUB_IMAGE: brotandgames/ciao
   GHCR_IMAGE: ghcr.io/brotandgames/ciao

@@ -3,14 +3,15 @@ name: helm chart
 # Lints the chart on every change and publishes it to
 # oci://ghcr.io/<owner>/charts/ciao when its version is new.
 # Not triggered by tags: those build the Docker image (docker.yml).
-on:
-  push:
-    branches: [ master ]
-    paths: [ 'helm-chart/**', '.github/workflows/helm.yml' ]
-  pull_request:
-    branches: [ master ]
-    paths: [ 'helm-chart/**', '.github/workflows/helm.yml' ]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [ master ]
+#     paths: [ 'helm-chart/**', '.github/workflows/helm.yml' ]
+#   pull_request:
+#     branches: [ master ]
+#     paths: [ 'helm-chart/**', '.github/workflows/helm.yml' ]
+# 
 jobs:
   helm:
     runs-on: ubuntu-latest
